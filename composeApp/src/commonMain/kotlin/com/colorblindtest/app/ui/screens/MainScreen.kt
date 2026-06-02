@@ -18,6 +18,7 @@ import kotlin.random.Random
 data class Question(val circles: List<Pair<Offset, Float>>, val answer: Int, val options: List<String>)
 
 @Composable
+@OptIn(ExperimentalMaterial3Api::class)
 fun MainScreen() {
     var currentQ by remember { mutableIntStateOf(0) }
     var score by remember { mutableIntStateOf(0) }
